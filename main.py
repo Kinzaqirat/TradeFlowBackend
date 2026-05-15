@@ -29,7 +29,6 @@ app = FastAPI(
 # CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.CORS_ORIGINS.split(","),
     allow_origins=["https://trade-flow-frontend.vercel.app"], # Your Vercel URL
     allow_credentials=True,
     allow_methods=["*"],
