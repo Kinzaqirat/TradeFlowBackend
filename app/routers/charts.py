@@ -92,7 +92,7 @@ async def get_chart_data(
 @router.get("/price-data/{symbol}")
 async def get_symbol_price_data(
     symbol: str,
-    current_user: User = Depends(get_current_user),
+
 ):
     """Fetch Alpha Vantage price data for a general symbol (Stock or Crypto)."""
     if symbol in chart_cache and (datetime.now() - chart_cache[symbol]["ts"]).seconds < 3600:       
